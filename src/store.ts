@@ -14,5 +14,5 @@ export const store = configureStore({
   reducer: {
     simple: simpleReducer
   },
-  middleware: [...getDefaultMiddleware(), loggerMiiddlWare]
+  middleware: defaultMiddleWare => defaultMiddleWare().concat(loggerMiiddlWare),
 });
